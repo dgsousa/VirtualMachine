@@ -177,7 +177,10 @@ class CodeWriter {
 			this.currentStream.write(`// push constant 0 for the ${i}th time\n`);
 			pushSequence.forEach(line => {
 				this.currentStream.write(line + '\n');
-			}); 
+			});
+			popSequence.forEach(line => {
+				this.currentStream.write(line + '\n');
+			});
 		}
 	}
 
